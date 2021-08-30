@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- REQUISITOS ESPECÍFICOS:
+
+> Jquery : 
+    Scroll - home.html (linha 39), script.js (linha 1) e CSS (linha 142)
+    Tabela - Sobrenós.html (linha 95)
+
+>  JavaScript: 
+    Validações - script.js (linha 21)
+
+> Css: 
+    Rodapé - style.css (linha 114)
+
+> HTML: 
+    aside e article - home.html (linha 181)
+
+> BootStrap:
+    Formulário: cadastro.html 
+    nav-bar responsivo: Todas as páginas. Ex. home.html (linha 42)
+    Estilo nos botões e texto: Home.htlm botões nos cards (linha 227) e no cadastre-se.html.
+    Mais itens:
+        home.html -  carrocel (linha 93), cards (linha 227)
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <title>Vegô | Home</title>
+</head>
+
+<body>
+    <!-- SCROLL ANCORA -->
+    <div class="cursor"></div>
+
+    <!-- CABEÇALHO -->
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand " id="logo" href="#">🆅🅴🅶ô</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="Sobre nós.html">SOBRE NÓS</a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="Produtos.html">PRODUTOS</a>
+                </li>
+                <li class="nav-item ml-3">
+                    <a class="nav-link" href="Cadastra-se.html">SEJA UMA REVENDEDORA</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Busca" aria-label="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" title="Busca"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg></button>
+
+                <button class="btn btn-outline-dark my-2 my-sm-0 ml-2" type="submit" title="Área da Revendedora"> <svg
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383L5.93 1.757zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0v-2zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1z" />
+                    </svg></button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- BODY -->
+
+    <body>
+
+        <!-- BANNER -->
+        <div id="banner">
+            <h1 id="textbanner">A beleza da natureza em você!</h1>
+        </div>
+
+        <!-- CARROSSEL -->
+        <section>
+            <div id="carrossel" class="container pt-4 pb-2">
+                <div class="col-lg-12">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3">
+                                        <img src="img/Perfume transparente.png" height="200px" 
+                                            alt="First slide">
+                                        <div class="carousel-caption d-none d-md-block text-right" height="100px">
+                                            <h5 class="text-dark text-right">Perfume</h5>
+                                            <p class="text-info">Aromático</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3">
+                                        <img src="img/sos_essencial_400x.jpg" height="200px">
+                                        <div class="carousel-caption d-none d-md-block text-right" height="100px">
+                                            <h5 class="text-dark">Creme</h5>
+                                            <p class="text-info">SOS Essencial</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3">
+                                        <img src="img/frutal-09-600x600.png" height="200px">
+                                        <div class="carousel-caption d-none d-md-block text-right" height="100px">
+                                            <h5 class="text-dark">Perfume</h5>
+                                            <p class="text-info">Frutal</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3">
+                                        <img src="img/sos_nortuno_400x.png" height="200px">
+                                        <div class="carousel-caption d-none d-md-block text-right" height="100px">
+                                            <h5 class="text-dark">Creme</h5>
+                                            <p class="text-info">SOS Noturno</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item" height="400px">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-3">
+                                        <img src="img/bruma_imagens_site_400x.png" height="200px" class="">
+                                        <div class="carousel-caption d-none d-md-block text-right" height="100px">
+                                            <h5 class="text-dark">Bruma</h5>
+                                            <p class="text-info">Revitalizante</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3">
+                                        <img src="img/Oriental-600x600.png" height="200px">
+                                        <div class="carousel-caption d-none d-md-block text-right" height="100px">
+                                            <h5 class="text-dark">Perfume</h5>
+                                            <p class="text-info">Oriental</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3">
+                                        <img src="img/Rio_fotos_still_shopify_Serumcorporal_400x.jpg" height="200px">
+                                        <div class="carousel-caption d-none d-md-block text-right" height="100px">
+                                            <h5 class="text-dark">Serum</h5>
+                                            <p class="text-info">Vita C</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3">
+                                        <img src="img/woody-08-600x600.png" height="200px">
+                                        <div class="carousel-caption d-none d-md-block text-right" height="100px">
+                                            <h5 class="text-dark">Perfume</h5>
+                                            <p class="text-info">Woody</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a id="carrocelprev" class="carousel-control-prev " href="#carouselExampleControls" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon sr-only" aria-hidden="true"></span>
+
+                    </a>
+                    <a id="carrocelnext" class="carousel-control-next" href="#carouselExampleControls" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon sr-only" aria-hidden="true"></span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ARTICLE E ASIDE -->
+        <div class="container w-100 pt-5">    
+            <div class="row">
+                <article id="box1_1" class="col-sm-6 bg-white d-flex flex-column align-items-center justify-content-center">
+                    <h1 class="text-center">O que usamos em nossas fórmulas?</h1><br>
+                    <p class="text-center pl-4 pr-4">Ingredientes ativos inovadores e multifuncionais, na concentração
+                        ideal, para garantir os resultados
+                        e benefícios a que cada produto se propõe. Nada de insumos desnecessários
+                    </p>
+                </article>
+                <aside id="box1_2" class="col-sm-6"><img id="img_box1_2" src="img/Creme transparência.png" alt="Creme"
+                        class="img-fluid" width="60%">
+                </aside>
+            </div>
+            <div class="row">
+                <article id="box2_1" class="col-sm-6"><img id="imgbox2_1" src="img/perfume_PNG.png" alt="Perfume"
+                        class="img-fluid" width="60%"></article>
+                <aside class="col-sm-6 bg-white d-flex flex-column align-items-center justify-content-center">
+                    <h1 class="text-center pl-4 pr-4">O que não usamos em nossas fórmulas?</h1><br>
+                    <p class="text-center pl-4 pr-4">Todo e qualquer ingrediente proibido pelos principais órgãos
+                        reguladores mundiais, sejam eles
+                        brasileiros, europeus ou americanos. Excluímos também ingredientes sintéticos ou naturais que tenham
+                        tido sua segurança toxicológica ou ambiental seriamente questionada por algum centro de pesquisa
+                        mundial de referência.</p>
+                </aside>
+            </div>
+            <div class="row">
+                <article id="box3_1" class="col-sm-6 bg-white d-flex flex-column align-items-center justify-content-center">
+                    <h1>Banimos não só:</h1>
+                    <ul id="lista">
+                        <li>Parabenos,</li>
+                        <li>Ftalatos,</li>
+                        <li>Resorcinol,</li>
+                        <li>PABA e seus derivados,</li>
+                        <li>Benzofenona,</li>
+                        <li>Octocrileno,</li>
+                        <li>Homosalato e Corantes sintéticos,</li>
+                    </ul>
+                    <h5 class="pl-5 pr-5 text-center">Mas centenas de outros ingredientes potencialmente tóxicos ou de
+                        efeitos cumulativos, ainda utilizados pela indústria.</h5>
+
+                </article>
+                <aside id="box3_2" class="col-sm-6 pt-3 pb-4"><img src="img/imgfloat (1).png" alt="Spray" width="50%"
+                        class="img-fluid" id="img_box3_2"></aside>
+            </div>
+        </div>
+        <!-- CARDS -->
+        <div id="cards" class="bg-light">
+            <div id="cardsbox" class="container-fluid d-flex row ml-4 pt-4 mt-3 pb-4">
+                <div class="card mr-3" style="width: 20rem;">
+                    <img src="img/Pele.jpg" class="card-img-top" alt="Pele">
+                    <div class="card-body">
+                        <h5 class="card-title">Tipos e pesos de ácido hialurônico: quanto mais, melhor? </h5>
+                        <p class="card-text">Você já deve ter ouvido falar que o ácido hialurônico, além de ter uma
+                            super capacidade de hidratação, pode ter diferentes tipos e pesos. Mas o que isso significa
+                            e qual o melhor para você?</p>
+                        <a href="#" class="btn btn-dark">SAIBA MAIS</a>
+                    </div>
+                </div>
+                <div class="card mr-3" style="width: 20rem;">
+                    <img src="img/Mar.jpg" class="card-img-top" alt="Mar">
+                    <div class="card-body">
+                        <h5 class="card-title">Bioativos do mar: o que eles fazem pra sua pele</h5>
+                        <p class="card-text">O mar abriga organismos resilientes e resistentes como poucos. É de lá que
+                            a gente extrai bioativos com propriedades únicas e poderosas</p>
+                        <a href="#" class="btn btn-dark">SAIBA MAIS</a>
+                    </div>
+                </div>
+                <div class="card mr-3" style="width: 20rem;">
+                    <img src="img/Regeneração.jpg" class="card-img-top" alt="Regeneração">
+                    <div class="card-body">
+                        <h5 class="card-title">O que você precisa saber sobre Regeneração Celular</h5>
+                        <p class="card-text">O processo é natural, contínuo e diário. Entenda como ele acontece e como
+                            você pode, sem esforço, intervir e melhorar a renovação – e a saúde! - da sua pele </p>
+                        <a href="#" class="btn btn-dark">SAIBA MAIS</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 20rem;">
+                    <img src="img/Duo.jpg" class="card-img-top" alt="Duo de produtos">
+                    <div class="card-body">
+                        <h5 class="card-title">SOS Essencial + SOS Noturno = a dupla perfeita</h5>
+                        <p class="card-text">Enquanto um hidrata, previne rugas e protege contra a luz azul, o outro
+                            regenera as células e desacelera o envelhecimento da pele. Entenda por que essa dobradinha
+                            se complementa tão bem e é imbatível</p>
+                        <a href="#" class="btn btn-dark">SAIBA MAIS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p id="logoFooter">🆅🅴🅶ô</p>
+        <p id="textoFooter" class="text-sm">O encontro da Beleza com o Tropical-Urbano.</p>
+        <div id="divMidias">
+            <a href="#" title="Facebook"> <svg xmlns="http://www.w3.org/2000/svg" id="iconeft1" width="30" height="30"
+                    fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg>
+            </a>
+            <a href="#" title="Instagram"> <svg xmlns="http://www.w3.org/2000/svg" id="iconeft2" width="30" height="30"
+                    fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                </svg>
+            </a>
+
+        </div>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <div><a class="tsx_whatsapp_icone_1 float-whatsapp-container direita" id="" title="" target="_blank">
+            <img class="float-whatsapp-logo"
+                src="https://static.tursites.com.br/data/design/shared/image/logomarcas/logo-whatsapp.png" /> </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="../bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- LIBRAS -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
